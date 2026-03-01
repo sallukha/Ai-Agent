@@ -6,7 +6,8 @@
     "type": "module",
     "scripts": {
         "start": "node index.js",
-        "dev": "node index.js"
+        "dev": "node index.js",
+        "build": "echo 'No build step required for this application'"
     },
     "dependencies": {
         "@google/genai": "^1.43.0",
