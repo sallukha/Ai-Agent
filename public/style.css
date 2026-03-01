@@ -23,7 +23,8 @@ body {
         radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
         radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.08) 0px, transparent 50%);
     color: var(--text-primary);
-    height: 100vh;
+    min-height: 100vh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +35,7 @@ body {
 .app-container {
     width: 100%;
     max-width: 1000px;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     background: transparent;
@@ -371,40 +372,46 @@ body {
 /* Responsive Media Queries */
 @media (max-width: 768px) {
     .app-header {
-        padding: 16px 20px;
+        padding: 12px 16px;
     }
 
     .app-header h1 {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
+    }
+    
+    .logo-circle {
+        width: 32px;
+        height: 32px;
     }
 
     .messages-wrapper {
-        padding: 20px;
-        gap: 20px;
+        padding: 16px;
+        gap: 16px;
     }
 
     .message {
-        max-width: 90%;
-        gap: 12px;
+        max-width: 92%;
+        gap: 10px;
     }
 
     .avatar {
-        width: 32px;
-        height: 32px;
-        font-size: 1rem;
-    }
-
-    .bubble {
-        padding: 12px 16px;
+        width: 30px;
+        height: 30px;
         font-size: 0.9rem;
     }
 
+    .bubble {
+        padding: 10px 14px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
     .input-area {
-        padding: 16px 20px;
+        padding: 12px 16px;
     }
 
     .chat-form {
-        padding: 8px 8px 8px 16px;
+        padding: 6px 6px 6px 14px;
         gap: 8px;
     }
 
@@ -425,10 +432,34 @@ body {
 
 @media (max-width: 480px) {
     .message {
-        max-width: 95%;
+        max-width: 98%;
+        gap: 8px;
     }
     
     .chat-form {
         border-radius: 20px;
+        gap: 6px;
+        padding: 4px 4px 4px 12px;
+    }
+    
+    .mic-btn, .send-btn {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+    }
+    
+    .chat-form input {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+    
+    .app-header h1 {
+        font-size: 1rem;
+    }
+    
+    .bubble pre {
+        padding: 0.75rem;
+        margin: 0.5rem 0;
+        font-size: 0.85rem;
     }
 }
